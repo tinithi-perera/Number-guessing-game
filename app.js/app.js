@@ -17,13 +17,15 @@ function random() {
         heading.innerText = "too low"
     }
     else if (numinput === randomNum) {
-        heading.innerText = "congratulations, you are correct"
+        heading.innerText = "congratulations, you are correct";
+        return;
     }
 
     chances--;
     if (chances === 0) {
         heading.innerText = `😢 Game Over! The correct number was ${randomNum}.`;
         document.getElementById("inputnum").disabled = true;
+        return;
     }
     else if (numinput > randomNum) {
         heading.innerText = `Too High! ${chances} chance(s) left.`;
