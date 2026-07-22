@@ -13,12 +13,21 @@ function random() {
     if (numinput > randomNum) {
         heading.innerText = "too high";
     }
-    else if (numinput < randomNum) {
+    if (numinput < randomNum) {
         heading.innerText = "too low"
     }
-    else if (numinput === randomNum) {
-        heading.innerText = "congratulations, you are correct";
+    if (numinput === randomNum) {
+        Swal.fire({
+            title: "Congratulations, you are correct!",
+            text: " ",
+            imageUrl: "images/win.jpg",
+            imageWidth: 300,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+        });
+        document.getElementById("inputnum").disabled = true;
         return;
+
     }
 
     chances--;
@@ -35,6 +44,7 @@ function random() {
     }
 
 }
+
 function btnclickonaction() {
     Swal.fire({
         title: "Keep going! Great players never quit.",
