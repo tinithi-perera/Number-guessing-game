@@ -20,7 +20,7 @@ function random() {
         Swal.fire({
             title: "Congratulations, you are correct!",
             text: " ",
-            imageUrl: "images/win.jpg",
+            imageUrl: "https://img.magnific.com/premium-vector/cartoon-boy-holding-trophy_53876-342846.jpg?semt=ais_hybrid&w=740&q=80",
             imageWidth: 300,
             imageHeight: 200,
             imageAlt: "Custom image"
